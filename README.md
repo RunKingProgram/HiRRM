@@ -14,5 +14,4 @@ LinkingTo: Rcpp,RcppArmadillo,RcppEigen,snow,parallel,data.table,nlme,BEDMatrix
 Built: R 4.0.0; x86_64-apple-darwin19.4.0; 2020-10-08 08:29:35 UTC; unix
 
 At release HiRRM will include two main functions:
-coefy = Fit_Curve(y,inputorders)
-Hi_RRM(plinkfilename,coefy)
+coefy = Fit_Curve(y,inputorders) and Hi_RRM(plinkfilename,coefy)
