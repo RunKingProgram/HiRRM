@@ -1,9 +1,9 @@
 # HiRRM -Early Access
+
 Package: HiRRM
 Type: Package
-Title: Fast Genome-wide Association Analysis for Dynamic Traits Using
-        Hierachical Mixed-Model
-Version: 1.0
+Title: Hi-RRM
+Version: 0.9
 Date: 2020-10-08
 Author: Yuxin Song
 Maintainer: Runqing Yang <runqingyang@cafs.ac.cn>
