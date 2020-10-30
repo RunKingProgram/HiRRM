@@ -1,18 +1,15 @@
 # HiRRM -Early Access
 
-Package: HiRRM<br>
-Type: Package<br>
-Title: Hi-RRM<br>
-Version: 0.9<br>
-Date: 2020-10-08<br>
-Author: Yuxin Song<br>
-Maintainer: Runqing Yang <runqingyang@cafs.ac.cn><br>
-Description: Fast Genome-wide Association Analysis for Dynamic Traits Using Hierachical Mixed-Model<br>
-License: GPL (>= 2)<br>
-Imports: Rcpp (>= 1.0.5)<br>
-LinkingTo: Rcpp,RcppArmadillo,RcppEigen,snow,parallel,data.table,nlme,BEDMatrix<br>
-Built: R 4.0.0; x86_64-apple-darwin19.4.0; 2020-10-08 08:29:35 UTC; unix<br>
-
+## Getting started
+###	1.1 Downloading HiRRM
+HiRRM can be downloaded https://github.com/YuxinSong-prog/HiRRM. It can be installed as a regular R package.
+###	1.2	Installing HiRRM
+HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, data.table, nlme and BEDMatrix.These dependencies should be installed before installing HiRRM.In addition, HiRRM requires Hi_RRM file (https://github.com/YuxinSong-prog/HiRRM)under your run directory.Here is an example for installing HiRRM and all its dependencies in an R session(assuming none of the R packages other than the default has been installed):
+```
+install.packages(c("Rcpp", "RcppArmadillo", "RcppEigen", "snow", "data.table", "nlme" , "BEDMatrix"), repos = "https://cran.r-project.org/")
+system(“R CMD install HiRRM_1.0.tgz”)
+```
+## Main functions
 At release HiRRM will include two main functions:
 ```
 coefy = Fit_Curve(y,inputorders) 
