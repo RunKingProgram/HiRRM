@@ -1,6 +1,6 @@
 # HiRRM -Early Access
 
-## 1 Getting started
+## 1. Getting started
 ####	Downloading HiRRM
 HiRRM can be downloaded https://github.com/YuxinSong-prog/HiRRM. It can be installed as a regular R package.
 ####	Installing HiRRM
@@ -9,7 +9,7 @@ HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, data.table, nlme
 install.packages(c("Rcpp", "RcppArmadillo", "RcppEigen", "snow", "data.table", "nlme" , "BEDMatrix"), repos = "https://cran.r-project.org/")
 system(“R CMD install HiRRM_1.0.tgz”)
 ```
-## 2 Main functions
+## 2. Main functions
 At release HiRRM will include two main functions:
 ```
 coefy = Fit_Curve(y,inputorders) 
@@ -22,3 +22,18 @@ Phenotype should be either saved as a data frame in R, or recorded in a text fil
 Order of polynomial you need to fit.
 #### plinkfilename
 An object class of character: the filename before the suffix of plink BED files. The three plink file must have a same filename, for example, “plinkfilename.bed”, “plinkfilename.bim” and “plinkfilename.bam”.
+
+## 3.Example
+```
+library(HiRRM)
+library(BEDMatrix)
+library(data.table)
+library(snow)
+library(nlme)
+
+path1<-"/Users/songyuxin/Desktop/CFWmice_binary"
+setwd(path1)
+y=as.matrix(fread("mvpheno"))
+coefy = Fit_Curve(y,3) 
+result = Hi_RRM("fill_cfw",coefy)
+```
