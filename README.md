@@ -6,8 +6,8 @@ HiRRM can be downloaded https://github.com/YuxinSong-prog/HiRRM. It can be insta
 ####	Installing HiRRM
 HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, data.table, nlme and BEDMatrix. These dependencies should be installed before installing HiRRM. In addition, HiRRM requires Hi_RRM file (https://github.com/YuxinSong-prog/HiRRM) under your run directory. Here is an example for installing HiRRM and all its dependencies in an R session(assuming none of the R packages other than the default has been installed):
 ```
-install.packages(c("Rcpp", "RcppArmadillo", "RcppEigen", "snow", "data.table", "nlme" , "BEDMatrix"), repos = "https://cran.r-project.org/")
-system(“R CMD install HiRRM_1.0.tgz”)
+install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
+system( “R CMD install HiRRM_1.0.tgz” )
 ```
 ## 2. Main functions
 At release HiRRM will include two main functions:
@@ -17,7 +17,29 @@ Hi_RRM(plinkfilename,coefy)
 ```
 #### Arguments
 #### y
-Phenotype should be either saved as a data frame in R, or recorded in a text file that can be read into R as a data frame. The rows of the data frame represent different individuals, the columns represent different time, and the columns represent variable.
+Phenotype should be either saved as a data frame in R, or recorded in a text file that can be read into R as a data frame, as below:
+
+|time| trait| id|
+| ---------- | :-----------:  | :-----------: |
+|1 |4.9| 1|
+|1 |4.6| 2|
+|1 |8| 3|
+|2 |5.1| 1|
+|3 |4.9| 1|
+|3 |6.2| 2|
+|3 |5.2| 3|
+|3 |4.3| 4|
+|5 |5| 1|
+|6 |5.7| 3|
+|7 |4.9| 1|
+|7 |6.5| 2|
+|7 |4.7| 3|
+|7 |8.4| 4|
+|7 |5.5| 5|
+...
+
+
+
 #### inputorders
 Order of polynomial you need to fit.
 #### plinkfilename
