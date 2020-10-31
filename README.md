@@ -34,7 +34,7 @@ library(RcppArmadillo)
 library(nlme)
 
 setwd("./example")
-y=read.table("phenotype.txt",head=T)
+y = read.table("phenotype.txt",head=T)
 coefy = Fit_Curve(y,3) 
 result = Hi_RRM("geno",coefy)
 ```
