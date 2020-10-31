@@ -26,14 +26,15 @@ An object class of character: the filename before the suffix of plink BED files.
 ## 3.Example
 ```
 library(HiRRM)
+library(parallel)
 library(BEDMatrix)
 library(data.table)
 library(snow)
+library(RcppArmadillo)
 library(nlme)
 
-path1<-"/Users/songyuxin/Desktop/CFWmice_binary"
-setwd(path1)
-y=as.matrix(fread("mvpheno"))
+setwd("./example")
+y=read.table("phenotype.txt",head=T)
 coefy = Fit_Curve(y,3) 
-result = Hi_RRM("fill_cfw",coefy)
+result = Hi_RRM("geno",coefy)
 ```
