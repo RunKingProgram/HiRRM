@@ -50,6 +50,6 @@ library(nlme)
 
 setwd("./example")
 y = read.table("phenotype.txt",head=T)
-coefy = Fit_Curve(y,3) 
+coefy = Fit_Curve(y,4) 
 result = Hi_RRM("geno",coefy)
 ```
