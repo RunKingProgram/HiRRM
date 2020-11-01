@@ -17,7 +17,7 @@ Hi_RRM(plinkfilename,coefy)
 ```
 #### Arguments
 #### y
-Phenotype should be either saved as a data frame in R, or recorded in a text file that can be read into R as a data frame. For example, here we show the header and first 9 rows of the example: 
+Phenotype should be either saved as a data frame in R, or recorded in a text file that can be read into R as a data frame. For example, here we show the header and first 9 rows of the phenotype: 
 
 |time| trait| id|
 | ---------- | :-----------:  | :-----------: |
