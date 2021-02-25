@@ -53,23 +53,22 @@ For example (as "phenotype2.txt" file):
 ...
 
 ```
-inputorders = 4
-coefy = Estimate_coefy(Phenotype,order) 
+inputorders <- 4
+coefy <- Estimate_coefy(Phenotype,order) 
 ```
 
 #### order
 An object class of numeric: the optimal growth trajectory could be chosen according to the Bayesian information criterion (BIC).
 ```
-inputorders = 4
-coefy = Estimate_coefy(Phenotype,inputorders) 
+inputorders <- 4
+coefy <- Estimate_coefy(Phenotype,inputorders) 
 ```
 
 #### Genotype
-An object class of character: the filename of PLINK BED files (http://www.cog-genomics.org/plink/1.9/formats#bed). The three PLINK files must have a same filename, for example: “Genotype.bed”, “Genotype.bim” and “Genotype.bam”.
-For example:
+An object class of character: the filename of PLINK BED files (http://www.cog-genomics.org/plink/1.9/formats#bed). The three PLINK files must have a same filename, 
+For example, if the Genotype file named  “geno.bed”, “geno.bim” and “geno.bam” :
 ```
-Genotype=“geno”
-result <- Hi_RRM(Genotype,coefy)
+result <- Hi_RRM(“geno”,coefy)
 ```
 
 
