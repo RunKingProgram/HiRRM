@@ -52,16 +52,10 @@ For example (as "phenotype2.txt" file):
 |4 |1|14.3|3|
 ...
 
-```
-inputorders <- 4
-coefy <- Estimate_coefy(Phenotype,order) 
-```
-
 #### order
 An object class of numeric: the optimal growth trajectory could be chosen according to the Bayesian information criterion (BIC).
 ```
-inputorders <- 4
-coefy <- Estimate_coefy(Phenotype,inputorders) 
+coefy <- Estimate_coefy(Phenotype,4) 
 ```
 
 #### Genotype
