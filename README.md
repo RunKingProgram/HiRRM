@@ -90,7 +90,6 @@ library(nlme)
 
 setwd("./example")
 Phenotype <- read.table("phenotype.txt",head=T)
-Best_curve <- Fit_Curve(Phenotype)
 
 
 coefy <-  Fit_Curve(Phenotype,4) 
