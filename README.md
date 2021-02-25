@@ -20,26 +20,58 @@ system( “R CMD install HiRRM_1.0.tgz” )
 ## 2. Main functions
 The current version of HiRRM includes two main functions:
 ```
-coefy = Fit_Curve(y,inputorders) 
+Fit_Curve(Phenotype,maxorder,fixeffect=NULL)
+coefy = Estimate_coefy(Phenotype,inputorders,fixeffect=NULL) 
 Hi_RRM(plinkfilename,coefy)
 ```
-**Fit_Curve** functions is used to fit phenotypic trajectory and **Hi_RRM** function for detect QTNs for phenotypic trajectory. 
+**Fit_Curve** functions is used to fit the population means of longitudinal phenotypes
+**Estimate_coefy** functions is used to estimate phenotypic regression coefficients
+**Hi_RRM** function is second hierarchical mvLMM, associate multiple phenotypic regressions with markers using EMMAX. 
 
 #### Arguments
-#### y
-Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. Here is an example of the header and first 9 rows for the phenotype: 
-
-|time| trait| id|
+#### Phenotype
+Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
+|id| time| trait|
 | ---------- | :-----------:  | :-----------: |
-|1 |4.9| 1|
-|1 |4.6| 2|
-|1 |8| 3|
-|2 |10.1| 1|
-|3 |14.9| 1|
-|3 |16.2| 2|
-|3 |15.2| 3|
-|3 |14.3| 4|
+|1 |1|4.9|
+|2 |1|4.6|
+|3 |1|8|
+|1 |2|10.1|
+|1 |3|14.9|
+|2 |3|16.2|
+|3 |3|15.2|
+|4 |3|314.3|
 ...
+```
+Fit_Curve(Phenotype)
+inputorders = 4
+coefy = Estimate_coefy(Phenotype,inputorders) 
+```
+
+#### maxorder
+the max order of Legendre polynomial used to fit the population means of longitudinal phenotypes, default by 10.
+#### fixeffect
+fixeffect is the column number of time-dependent fixed factors,such as population stratification and sex, default by NULL.
+For example (as "phenotype2.txt" file):
+|id|sex| time| trait|
+| ---------- | :-----------:  | :-----------: |
+|1 |1|1|4.9|
+|2 |2|1|4.6|
+|3 |1|1|8|
+|1 |1|2|10.1|
+|1 |1|3|14.9|
+|2 |2|3|16.2|
+|3 |1|3|15.2|
+|4 |1|3|314.3|
+...
+
+```
+maxorder = 10
+fixeffect = 2
+Fit_Curve(Phenotype,maxorder,fixeffect)
+inputorders = 4
+coefy = Estimate_coefy(Phenotype,inputorders,fixeffect) 
+```
 
 #### inputorders
 An object class of numeric: the order of polynomial you need to fit.
