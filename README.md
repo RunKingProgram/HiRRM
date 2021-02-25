@@ -63,9 +63,19 @@ An object class of character，which consists of the three files in PLINK BED fo
 ```
 result <- Hi_RRM(“Genotype”,coefy)
 ```
+## 3.Output
+The HiRRM.txt contains the results.The number of columns will depend on the number of phenotypes used for analysis. The first three columns are: chromosome numbers,base pair positions on the chromosome and snp ids. The last column contains p values from the association tests. The middle columns contain beta estimates and the variance matrix for these estimates. And QTN candidates above the Bonferroni corrected level of significance would be selected in R as matrix.
 
+|CHR|	POS	|SNP|	BETA1	|BETA2|	BETA3|	BETA4|	BETA5|	VBETA1	|VBETA2	|VBETA3	|VBETA4|	VBETA5	|chisq|	p-value|
+| ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |
+|2	|168798341|	UNC4465781|	0.87197|	0.9642221|	0.7717525	|0.9575686	|-0.04723711|	0.02376907	|0.02651553	|0.02761537	|0.03023668	|0.000999294	|41.64283	|6.96E-08|
+|4	|3785255	|UNC6639515|	0.1759812|	0.8056519	|0.7291173|	0.4126044	|0.01886118	|0.02634507	|0.02924049	|0.03057526	|0.03364178	|0.00088208	|50.43038	|1.13E-09
+|4	|3787560	|JAX00115433|	0.1759812|	0.8056519|	0.7291173	|0.4126044|	0.01886118|	0.02634507	|0.02924049|0.03057526	|0.03364178	|0.00088208	|50.43038	|1.13E-09|
+|4	|4878592	|UNC6651698|	0.231539|	0.8650871|	0.7884397|	0.4663801	|0.01819409|	0.02694842	|0.02990495	|0.03127136	|0.03441789|	0.000882081|	52.15886	|5.00E-10|
+|4	|5999840	|UNC6664472| 0.2129025|	0.8520055|	0.7457233|	0.4366588	|0.0208303	|0.02778343	|0.03082014	|0.03223382	|0.03549616|	0.000876123	|49.33987	|1.89E-09|
+|4  |7033031	|UNC6677287|	0.1600859|	0.8128049|	0.6470668	|0.4120346	|0.02304759	|0.02941886	|0.03261758|	0.03412091	|0.03760379	|0.000876228|	44.15184	2.16E-08|
 
-## 3.Example
+## 4.Example
 ```
 library(HiRRM)
 library(parallel)
