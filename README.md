@@ -19,10 +19,8 @@ The current version of HiRRM includes two main functions:
 coefy = Estimate_coefy(Phenotype,inputorders,fixeffect=NULL) 
 Hi_RRM(plinkfilename,coefy)
 ```
-The first hierarchical RRM use **Estimate_coefy** fuction to estimate phenotypic regression coefficients
-
-The second hierarchical mvLMM use **Hi_RRM** function to associate multiple phenotypic regressions with markers. 
-
+**Estimate_coefy** is to estimate phenotypic regression coefficients in optimal linear longitudinal trajectory with first hierarchical RRM or LS method.
+**Hi_RRM** is to associate multiple phenotypic regressions with markers using EMMAX with second hierarchical mvLMM method.
 
 #### Arguments
 #### Phenotype
