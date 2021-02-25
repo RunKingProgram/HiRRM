@@ -24,7 +24,7 @@ Hi_RRM(Genotype,coefy)
 
 #### Arguments
 #### Phenotype
-Phenotype file is following dmu format (https://dmu.ghpc.au.dk/DMU/Doc/Current/dmuv6_guide.5.2.pdf), which should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
+An object class of character. Phenotype file is following dmu format (https://dmu.ghpc.au.dk/DMU/Doc/Current/dmuv6_guide.5.2.pdf), which should be recorded in a text file with colname that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
 |id| trait|time|
 | ---------- | :-----------:  | :-----------: |
 |1 |4.9|1|
@@ -59,8 +59,7 @@ coefy <- Estimate_coefy(Phenotype,4)
 ```
 
 #### Genotype
-An object class of character: the filename of PLINK BED files (http://www.cog-genomics.org/plink/1.9/formats#bed). The three PLINK files must have a same filename, 
-For example, if the Genotype file named  “Genotype.bed”, “Genotype.bim” and “Genotype.bam” :
+An object class of character，which is written in PLINK BED format. (http://www.cog-genomics.org/plink/1.9/formats#bed). The three PLINK files must have a same filename,  For example, if the Genotype file named  “Genotype.bed”, “Genotype.bim” and “Genotype.bam” :
 ```
 result <- Hi_RRM(“Genotype”,coefy)
 ```
@@ -77,10 +76,8 @@ library(RcppArmadillo)
 library(nlme)
 
 setwd("./example")
-Phenotype <- read.table("phenotype.txt",head=T)
 
-
-coefy <-  Estimate_coefy(Phenotype,4) 
+coefy <-  Estimate_coefy("phenotye.txt",4) 
 result <- Hi_RRM("Genotype",coefy)
 
 
