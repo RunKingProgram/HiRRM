@@ -53,8 +53,9 @@ the max order of Legendre polynomial used to fit the population means of longitu
 #### fixeffect
 fixeffect is the column number of time-dependent fixed factors,such as population stratification and sex, default by NULL.
 For example (as "phenotype2.txt" file):
+
 |id|sex| time| trait|
-| ---------- | :-----------:  | :-----------: |
+| ---------- | :-----------:  | :-----------: | :-----------: |
 |1 |1|1|4.9|
 |2 |2|1|4.6|
 |3 |1|1|8|
