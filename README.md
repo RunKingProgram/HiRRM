@@ -25,32 +25,32 @@ Hi_RRM(plinkfilename,coefy)
 #### Arguments
 #### Phenotype
 Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
-|id| time| trait|
+|id| trait|time|
 | ---------- | :-----------:  | :-----------: |
-|1 |1|4.9|
-|2 |1|4.6|
-|3 |1|8|
-|1 |2|10.1|
-|1 |3|14.9|
-|2 |3|16.2|
-|3 |3|15.2|
-|4 |3|14.3|
+|1 |4.9|1|
+|2 |4.6|1|
+|3 |8|1|
+|1 |10.1|2|
+|1 |14.9|3|
+|2 |16.2|3|
+|3 |15.2|3|
+|4 |14.3|3|
 ...
 
 #### fixeffect
 fixeffect is the column number of time-dependent fixed factors,such as population stratification and sex, default by NULL.
 For example (as "phenotype2.txt" file):
 
-|id|sex| time| trait|
+|id|sex|trait | time|
 | ---------- | :-----------:  | :-----------: | :-----------: |
-|1 |1|1|4.9|
-|2 |2|1|4.6|
-|3 |1|1|8|
-|1 |1|2|10.1|
-|1 |1|3|14.9|
-|2 |2|3|16.2|
-|3 |1|3|15.2|
-|4 |1|3|14.3|
+|1 |1|4.9|1|
+|2 |2|4.6|1|
+|3 |1|8|1|
+|1 |1|10.1|2|
+|1 |1|14.9|3|
+|2 |2|16.2|3|
+|3 |1|15.2|3|
+|4 |1|14.3|3|
 ...
 
 ```
