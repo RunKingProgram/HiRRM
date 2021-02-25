@@ -16,15 +16,15 @@ system( “R CMD install HiRRM_1.0.tar.gz” )
 ## 2. Main functions
 The current version of HiRRM includes two main functions:
 ```
-coefy = Estimate_coefy(Phenotype,inputorders,fixeffect=NULL) 
-Hi_RRM(plinkfilename,coefy)
+coefy = Estimate_coefy(Phenotype,order) 
+Hi_RRM(Genotype,coefy)
 ```
 **Estimate_coefy** is to estimate phenotypic regression coefficients in optimal linear longitudinal trajectory with first hierarchical RRM or LS method.
 **Hi_RRM** is to associate multiple phenotypic regressions with markers using EMMAX with second hierarchical mvLMM method.
 
 #### Arguments
 #### Phenotype
-Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
+Phenotype file is following dmu format (https://dmu.ghpc.au.dk/DMU/Doc/Current/dmuv6_guide.5.2.pdf), which should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
 |id| trait|time|
 | ---------- | :-----------:  | :-----------: |
 |1 |4.9|1|
@@ -37,8 +37,7 @@ Phenotype should be either saved as a matrix in R, or recorded in a text file th
 |4 |14.3|3|
 ...
 
-#### fixeffect
-fixeffect is the column number of time-dependent fixed factors,such as population stratification and sex, default by NULL.
+If there is time-dependent fixed factors,such as population stratification and sex, it should be placed before anylized trait and it will be corrected automatically
 For example (as "phenotype2.txt" file):
 
 |id|sex|trait | time|
@@ -54,25 +53,23 @@ For example (as "phenotype2.txt" file):
 ...
 
 ```
-fixeffect = 2
 inputorders = 4
-coefy = Estimate_coefy(Phenotype,inputorders,fixeffect) 
+coefy = Estimate_coefy(Phenotype,order) 
 ```
 
-#### inputorders
-An object class of numeric: the order of polynomial you need to fit.
-
-We chose the optimal growth trajectory according to the Bayesian information criterion (BIC).
+#### order
+An object class of numeric: the optimal growth trajectory could be chosen according to the Bayesian information criterion (BIC).
 ```
 inputorders = 4
 coefy = Estimate_coefy(Phenotype,inputorders) 
 ```
 
-#### plinkfilename
-An object class of character: the filename of PLINK BED files. The three PLINK files must have a same filename, for example: “plinkfilename.bed”, “plinkfilename.bim” and “plinkfilename.bam”.
+#### Genotype
+An object class of character: the filename of PLINK BED files (http://www.cog-genomics.org/plink/1.9/formats#bed). The three PLINK files must have a same filename, for example: “Genotype.bed”, “Genotype.bim” and “Genotype.bam”.
 For example:
 ```
-result <- Hi_RRM("geno",coefy)
+Genotype=“geno”
+result <- Hi_RRM(Genotype,coefy)
 ```
 
 
