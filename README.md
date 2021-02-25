@@ -92,7 +92,7 @@ setwd("./example")
 Phenotype <- read.table("phenotype.txt",head=T)
 
 
-coefy <-  Fit_Curve(Phenotype,4) 
+coefy <-  Estimate_coefy(Phenotype,4) 
 result <- Hi_RRM("geno",coefy)
 
 
