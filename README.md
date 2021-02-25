@@ -24,7 +24,7 @@ Hi_RRM(Genotype,coefy)
 
 #### Arguments
 #### Phenotype
-An object class of character. Phenotype file is following dmu format (https://dmu.ghpc.au.dk/DMU/Doc/Current/dmuv6_guide.5.2.pdf), which should be recorded in a text file with colname that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
+**Phenotype must be adjusted for non-time-dependent testing date.** Phenotype is an object class of character，which is dmu format (https://dmu.ghpc.au.dk/DMU/Doc/Current/dmuv6_guide.5.2.pdf), and it should be recorded in a text file with colname that can be read into R as a matrix. Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
 |id| trait|time|
 | ---------- | :-----------:  | :-----------: |
 |1 |4.9|1|
@@ -37,7 +37,7 @@ An object class of character. Phenotype file is following dmu format (https://dm
 |4 |14.3|3|
 ...
 
-If there is time-dependent fixed factors,such as population stratification and sex, it should be placed before anylized trait and it will be corrected automatically
+If there is time-dependent fixed factors,such as population stratification and sex, it should be placed before anylized trait and HiRRM will adjuest it automatically
 For example (as "phenotype2.txt" file):
 
 |id|sex|trait | time|
