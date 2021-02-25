@@ -21,7 +21,7 @@ Hi_RRM(plinkfilename,coefy)
 ```
 **Estimate_coefy** functions use first hierarchical RRM to estimate phenotypic regression coefficients
 
-**Hi_RRM** function use the second hierarchical mvLMM to associate multiple phenotypic regressions with markers using EMMAX. 
+**Hi_RRM** function use the second hierarchical mvLMM to associate multiple phenotypic regressions with markers. 
 
 
 #### Arguments
