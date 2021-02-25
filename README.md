@@ -21,8 +21,11 @@ coefy = Estimate_coefy(Phenotype,inputorders,fixeffect=NULL)
 Hi_RRM(plinkfilename,coefy)
 ```
 **Fit_Curve** functions is used to fit the population means of longitudinal phenotypes
+
 **Estimate_coefy** functions is used to estimate phenotypic regression coefficients
+
 **Hi_RRM** function is second hierarchical mvLMM, associate multiple phenotypic regressions with markers using EMMAX. 
+
 
 #### Arguments
 #### Phenotype
