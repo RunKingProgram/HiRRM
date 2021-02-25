@@ -26,7 +26,7 @@ Hi_RRM(plinkfilename,coefy)
 
 #### Arguments
 #### Phenotype
-Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
+Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. **Phenotype must be adjusted for non-time-dependent testing date.** Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
 |id| time| trait|
 | ---------- | :-----------:  | :-----------: |
 |1 |1|4.9|
