@@ -60,9 +60,9 @@ coefy <- Estimate_coefy(Phenotype,4)
 
 #### Genotype
 An object class of character: the filename of PLINK BED files (http://www.cog-genomics.org/plink/1.9/formats#bed). The three PLINK files must have a same filename, 
-For example, if the Genotype file named  “geno.bed”, “geno.bim” and “geno.bam” :
+For example, if the Genotype file named  “Genotype.bed”, “Genotype.bim” and “Genotype.bam” :
 ```
-result <- Hi_RRM(“geno”,coefy)
+result <- Hi_RRM(“Genotype”,coefy)
 ```
 
 
