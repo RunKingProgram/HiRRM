@@ -23,6 +23,8 @@ The current version of HiRRM includes two main functions:
 coefy = Fit_Curve(y,inputorders) 
 Hi_RRM(plinkfilename,coefy)
 ```
+**Fit_Curve** functions is used to fit phenotypic trajectory and **Hi_RRM** function for detect QTNs for phenotypic trajectory. 
+
 #### Arguments
 #### y
 Phenotype should be either saved as a matrix in R, or recorded in a text file that can be read into R as a matrix. Here is an example of the header and first 9 rows for the phenotype: 
