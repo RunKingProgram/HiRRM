@@ -1,0 +1,15 @@
+Package: HiRRM
+Type: Package
+Title: Fast Genome-wide Association Analysis for Dynamic Traits Using
+        Hierachical Mixed-Model
+Version: 1.0
+Date: 2020-10-08
+Author: Yuxin Song
+Maintainer: Runqing Yang <runqingyang@cafs.ac.cn>
+Description: Fast Genome-wide Association Analysis for Dynamic Traits Using Hierachical Mixed-Model
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.5)
+LinkingTo:
+        Rcpp,RcppArmadillo,RcppEigen,snow,parallel,data.table,nlme,BEDMatrix
+NeedsCompilation: yes
+Packaged: 2021-02-25 10:33:27 UTC; songyuxin
