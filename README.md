@@ -16,8 +16,8 @@ system( “R CMD install HiRRM_1.0.tar.gz” )
 ## 2. Main functions
 The current version of HiRRM includes two main functions:
 ```
-coefy = Estimate_coefy(Phenotype,order) 
-Hi_RRM(Genotype,coefy)
+coefy <- Estimate_coefy(Phenotype,order) 
+result <- Hi_RRM(Genotype,coefy)
 ```
 **Estimate_coefy** is to estimate phenotypic regression coefficients in optimal linear longitudinal trajectory with first hierarchical RRM or LS method.
 **Hi_RRM** is to associate multiple phenotypic regressions with markers using EMMAX with second hierarchical mvLMM method.
