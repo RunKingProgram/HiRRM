@@ -81,7 +81,7 @@ Phenotype <- read.table("phenotype.txt",head=T)
 
 
 coefy <-  Estimate_coefy(Phenotype,4) 
-result <- Hi_RRM("geno",coefy)
+result <- Hi_RRM("Genotype",coefy)
 
 
 
