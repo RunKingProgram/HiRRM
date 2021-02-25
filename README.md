@@ -16,12 +16,9 @@ system( “R CMD install HiRRM_1.0.tar.gz” )
 ## 2. Main functions
 The current version of HiRRM includes two main functions:
 ```
-Best_curve=Fit_Curve(Phenotype,maxorder,fixeffect=NULL)
 coefy = Estimate_coefy(Phenotype,inputorders,fixeffect=NULL) 
 Hi_RRM(plinkfilename,coefy)
 ```
-**Fit_Curve** functions is used to fit the population means of longitudinal phenotypes
-
 **Estimate_coefy** functions is used to estimate phenotypic regression coefficients
 
 **Hi_RRM** function is second hierarchical mvLMM, associate multiple phenotypic regressions with markers using EMMAX. 
@@ -41,60 +38,7 @@ Phenotype should be either saved as a matrix in R, or recorded in a text file th
 |3 |3|15.2|
 |4 |3|14.3|
 ...
-```
-Phenotype <- read.table("phenotype.txt",head=T)
-Best_curve=Fit_Curve(Phenotype,maxorder,fixeffect=NULL)
-```
-The results of **Fit_Curve** function are 
-```
-_order_0    R^2: 0 ; AIC: 122.6429 ; BIC: 123.4387 
-_order_1    R^2: 0.97146 ; AIC: 85.522 ; BIC: 86.71569 
-_order_2    R^2: 0.971475 ; AIC: 87.51621 ; BIC: 89.1078 
-_order_3    R^2: 0.9999998 ; AIC: -40.5251 ; BIC: -38.53562 
-_order_4    R^2: 0.9999999 ; AIC: -44.48917 ; BIC: -42.1018 
-_order_5    R^2: 0.9999999 ; AIC: -43.36619 ; BIC: -40.58092 
-_order_6    R^2: 0.9999999 ; AIC: -42.24417 ; BIC: -39.06101 
-_order_7    R^2: 0.9999999 ; AIC: -40.85443 ; BIC: -37.27337 
-_order_8    R^2: 0.9999999 ; AIC: -39.2315 ; BIC: -35.25255 
-_order_9    R^2: 0.9999999 ; AIC: -39.87008 ; BIC: -35.49323  
-_order_9 r2 is max  
-_order_4 BIC is min  
-_order_4 AIC is min  
-```
-and regression coefficients of the best growth curves are save as a list in R:
-```
-$r2
- Le[, 1:which(r2all == max(r2all))]1  Le[, 1:which(r2all == max(r2all))]2 
-                        88.719767426                         88.226011856 
- Le[, 1:which(r2all == max(r2all))]3  Le[, 1:which(r2all == max(r2all))]4 
-                         0.402920926                        -18.914937832 
- Le[, 1:which(r2all == max(r2all))]5  Le[, 1:which(r2all == max(r2all))]6 
-                        -0.036471601                          0.006312249 
- Le[, 1:which(r2all == max(r2all))]7  Le[, 1:which(r2all == max(r2all))]8 
-                        -0.017551812                         -0.001878643 
- Le[, 1:which(r2all == max(r2all))]9 Le[, 1:which(r2all == max(r2all))]10 
-                         0.016968062                         -0.070140721 
 
-$BIC
-Le[, 1:which(BICall == min(BICall))]1 Le[, 1:which(BICall == min(BICall))]2 
-                          88.72016734                           88.20360783 
-Le[, 1:which(BICall == min(BICall))]3 Le[, 1:which(BICall == min(BICall))]4 
-                           0.40424517                          -18.95483978 
-Le[, 1:which(BICall == min(BICall))]5 
-                          -0.03676707 
-
-$AIC
-Le[, 1:which(AICall == min(AICall))]1 Le[, 1:which(AICall == min(AICall))]2 
-                          88.72016734                           88.20360783 
-Le[, 1:which(AICall == min(AICall))]3 Le[, 1:which(AICall == min(AICall))]4 
-                           0.40424517                          -18.95483978 
-Le[, 1:which(AICall == min(AICall))]5 
-                          -0.03676707 
-
-```
-
-#### maxorder
-The max order of Legendre polynomial used to fit the population means of longitudinal phenotypes, default by 9.
 #### fixeffect
 fixeffect is the column number of time-dependent fixed factors,such as population stratification and sex, default by NULL.
 For example (as "phenotype2.txt" file):
@@ -113,7 +57,6 @@ For example (as "phenotype2.txt" file):
 
 ```
 fixeffect = 2
-Best_curve = Fit_Curve(Phenotype,fixeffect)
 inputorders = 4
 coefy = Estimate_coefy(Phenotype,inputorders,fixeffect) 
 ```
