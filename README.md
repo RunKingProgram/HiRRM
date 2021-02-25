@@ -77,7 +77,7 @@ library(nlme)
 
 setwd("./example")
 
-coefy <-  Estimate_coefy("phenotye.txt",4) 
+coefy <-  Estimate_coefy("phenotype.txt",4) 
 result <- Hi_RRM("Genotype",coefy)
 
 
