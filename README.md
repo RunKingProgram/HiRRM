@@ -20,7 +20,7 @@ system( “R CMD install HiRRM_1.0.tar.gz” )
 coefy <- Estimate_coefy(Phenotype,Order) 
 result <- Hi_RRM(Genotype,coefy)
 ```
-**Estimate_coefy** is to estimate phenotypic regression coefficients in optimal linear longitudinal trajectory with first hierarchical RRM or LS method;
+**Estimate_coefy** is to estimate phenotypic regression coefficients in individual dynamic trajectory with first hierarchical RRM or LS method;
 **Hi_RRM** is to associate multiple phenotypic regressions with markers using  an efficient mvLMM association analysis.
 
 #### Arguments
