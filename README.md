@@ -40,15 +40,12 @@ For example :
 
 #### Order
 An object class of numeric or formula，corrently,   which is taken at the order of optimal Legendre polynomial used to fit  population dynamic trajectory.
-```
-coefy <- Estimate_coefy(Phenotype,Order) 
-```
+
 
 #### Genotype
 An object class of character，which consists of three PLINK BED files with the same name. For example,  Genotype.bed, Genotype.bim and Genotype.bam :
-```
-result <- Hi_RRM(Genotype,coefy)
-```
+
+
 ## 3.Output files
 There are the two outputs:  Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
 For example, sigasso. as follows:
@@ -74,9 +71,9 @@ library(nlme)
 setwd("./example")
 Phenotype <- "phenotype.txt"
 Genotype <- "Genotype"
+Order <- 4
 
-
-coefy <-  Estimate_coefy(Phenotype,4) 
+coefy <-  Estimate_coefy(Phenotype,Order) 
 result <- Hi_RRM(Genotype,coefy)
 
 
