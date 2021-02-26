@@ -13,7 +13,7 @@ install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "
 system( “R CMD INSTALL HiRRM_1.0.tar.gz” )
 ```
 
-For MacOs:
+For MacOS:
 ```
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
 system( “R CMD INSTALL HiRRM_1.0_MacOS.tar.gz” )
