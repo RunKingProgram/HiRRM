@@ -24,7 +24,7 @@ result <- Hi_RRM(Genotype,coefy)
 
 #### Arguments
 #### Phenotype
-Phenotype file contains variables ID, Covariates such as population stratefication and sex etc., Penotype values and Age in turn.
+An object class of character. Phenotype file contains variables ID, Covariates such as population stratefication and sex etc., Penotype values and Age in turn.
 For example :
 |id|sex|phenotype| Age|
 | ---------- | :-----------:  | :-----------: | :-----------: |
