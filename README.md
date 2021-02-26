@@ -41,7 +41,6 @@ For example :
 #### Order
 Submodel is an object class of numeric, that is, the order of optimal Legendre Submodel is an object class of numeric or formula. Corrently,   submodel is taken at the order of optimal Legendre polynomial used to fit  population dynamic trajectory, which can be detemined by:
 ```
-Order <- MakeOrder(Phenotype)$BIC
 coefy <- Estimate_coefy(Phenotype,Order) 
 ```
 
@@ -51,7 +50,7 @@ An object class of character，which consists of three PLINK BED files with the 
 result <- Hi_RRM(Genotype,coefy)
 ```
 ## 3.Output files
-There are the three outputs: Optimal population phenotypic curve (R/list), Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
+There are the two outputs:  Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
 For example, sigasso. as follows:
 |CHR|	POS	|SNP|	BETA1	|BETA2|	BETA3|	BETA4|	BETA5|	VBETA1|VBETA2	|VBETA3	|VBETA4|VBETA5|chisq|	p-value|
 | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |:-----------: |:-----------: |:-----------: |
@@ -75,8 +74,8 @@ library(nlme)
 setwd("./example")
 Phenotype <- "phenotype.txt"
 Genotype <- "Genotype"
+Order <- 4
 
-Order <- MakeOrder(Phenotype)$BIC
 coefy <-  Estimate_coefy(Phenotype,Order) 
 result <- Hi_RRM("Genotype",coefy)
 
