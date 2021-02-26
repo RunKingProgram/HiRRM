@@ -39,7 +39,7 @@ For example :
 ...
 
 #### Order
-Submodel is an object class of numeric, that is, the order of optimal Legendre Submodel is an object class of numeric or formula. Corrently,   submodel is taken at the order of optimal Legendre polynomial used to fit  population dynamic trajectory, which can be detemined by:
+An object class of numeric or formula，corrently,   which is taken at the order of optimal Legendre polynomial used to fit  population dynamic trajectory.
 ```
 coefy <- Estimate_coefy(Phenotype,Order) 
 ```
@@ -77,7 +77,7 @@ Genotype <- "Genotype"
 Order <- 4
 
 coefy <-  Estimate_coefy(Phenotype,Order) 
-result <- Hi_RRM("Genotype",coefy)
+result <- Hi_RRM(Genotype,coefy)
 
 
 
