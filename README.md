@@ -6,7 +6,6 @@ HiRRM can be downloaded https://github.com/RunKingProgram/HiRRM. It can be insta
 ####	Installing HiRRM
 HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, parallel,data.table, nlme and BEDMatrix. These dependencies should be installed before installing HiRRM. In addition, **HiRRM requires Hi_RRM file (Hi_RRM_linux for Linux) under your working directory**. Here is an example for installing HiRRM and all its dependencies in an R session(assuming none of the R packages other than the default has been installed):
 
-Under Linux and MacOS
 ```
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
 system( “R CMD install HiRRM_1.0.tar.gz” )
