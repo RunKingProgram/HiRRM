@@ -41,7 +41,9 @@ For example :
 #### Order
 Order is an object class of numeric, that is, the order of optimal Legendre Submodel is an object class of numeric. Corrently, submodel is taken at the order of optimal Legendre polynomial used to fit population dynamic trajectory, which can be detemined by:
 ```
-coefy <- Estimate_coefy(Phenotype,4) 
+
+Order <- MakeOrder(Phenotype)$BIC
+coefy <- Estimate_coefy(Phenotype,Order) 
 ```
 
 #### Genotype
@@ -50,11 +52,8 @@ An object class of character，which consists of the three files in PLINK BED fo
 result <- Hi_RRM(“Genotype”,coefy)
 ```
 ## 3.Output files
-Output contains two files: "Coefpheno.txt" and "HiRRM.txt".
-"Coefpheno.txt" file is the result of Estimate_coefy function.
-"HiRRM.txt" file is the result of the association test.
-
-as following:
+There are the three outputs: Optimal population phenotypic curve (R/list), Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
+For example, sigasso. as follows:
 |CHR|	POS	|SNP|	BETA1	|BETA2|	BETA3|	BETA4|	BETA5|	VBETA1|VBETA2	|VBETA3	|VBETA4|VBETA5|chisq|	p-value|
 | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |:-----------: |:-----------: |:-----------: |
 |2	|168798341|	UNC4465781|0.87197|0.9642221|0.7717525|0.9575686|-0.04723711|	0.02376907	|0.02651553	|0.02761537	|0.03023668	|0.000999294	|41.64283	|6.96E-08|
@@ -76,7 +75,8 @@ library(nlme)
 
 setwd("./example")
 
-coefy <-  Estimate_coefy("phenotype.txt",4) 
+Order <- MakeOrder(Phenotype)$BIC
+coefy <-  Estimate_coefy("phenotype.txt",Order) 
 result <- Hi_RRM("Genotype",coefy)
 
 
