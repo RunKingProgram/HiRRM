@@ -20,27 +20,13 @@ coefy <- Estimate_coefy(Phenotype,order)
 result <- Hi_RRM(Genotype,coefy)
 ```
 **Estimate_coefy** is to estimate phenotypic regression coefficients in optimal linear longitudinal trajectory with first hierarchical RRM or LS method.
-**Hi_RRM** is to associate multiple phenotypic regressions with markers using EMMAX with second hierarchical mvLMM method.
+**Hi_RRM** is to associate multiple phenotypic regressions with markers using mvLMM method.
 
 #### Arguments
 #### Phenotype
-**Phenotype must be adjusted for non-time-dependent testing date.** Phenotype is an object class of character，which is dmu format (https://dmu.ghpc.au.dk/DMU/Doc/Current/dmuv6_guide.5.2.pdf), and it should be recorded in a text file with colname that can be read into R as a matrix. Here is an example of the header and first 9 rows for the phenotype (as "phenotye.txt" file): 
-|id| trait|time|
-| ---------- | :-----------:  | :-----------: |
-|1 |4.9|1|
-|2 |4.6|1|
-|3 |8|1|
-|1 |10.1|2|
-|1 |14.9|3|
-|2 |16.2|3|
-|3 |15.2|3|
-|4 |14.3|3|
-...
-
-If there is time-dependent fixed factors,such as population stratification and sex, it should be placed before anylized trait and HiRRM will adjuest it automatically
-For example (as "phenotype2.txt" file):
-
-|id|sex|trait | time|
+Phenotype file can be composed by an ID column (id), factor columns (such as population stratification and sex), phenotype (must be adjusted for non-time-dependent testing date) and time column (age) in turn.
+For example :
+|id|sex|phenotype| time|
 | ---------- | :-----------:  | :-----------: | :-----------: |
 |1 |1|4.9|1|
 |2 |2|4.6|1|
@@ -52,8 +38,8 @@ For example (as "phenotype2.txt" file):
 |4 |1|14.3|3|
 ...
 
-#### order
-An object class of numeric: the optimal growth trajectory could be chosen according to the Bayesian information criterion (BIC).
+#### Order
+Order is an object class of numeric, that is, the order of optimal Legendre Submodel is an object class of numeric. Corrently, submodel is taken at the order of optimal Legendre polynomial used to fit population dynamic trajectory, which can be detemined by:
 ```
 coefy <- Estimate_coefy(Phenotype,4) 
 ```
