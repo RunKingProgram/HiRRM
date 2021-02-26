@@ -48,7 +48,7 @@ An object class of character，which consists of three PLINK BED files with the 
 
 ## 3.Output files
 There are the two outputs:  Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
-For example, sigasso. as follows:
+For example, sigasso.txt:
 |Chr|	Pos	|Snp|	Beta1	|Beta2|	Beta3|	Beta4|	Beta5|	Vb1|Vb2	|Vb3	|Vb4|Vb5|Chisq|	P-value|
 | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |:-----------: |:-----------: |:-----------: |
 |2	|168798341|	UNC4465781|0.87197|0.9642221|0.7717525|0.9575686|-0.04723711|	0.02376907	|0.02651553	|0.02761537	|0.03023668	|0.000999294	|41.64283	|6.96E-08|
