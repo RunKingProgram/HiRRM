@@ -48,7 +48,7 @@ coefy <- Estimate_coefy(Phenotype,Order)
 #### Genotype
 An object class of character，which consists of three PLINK BED files with the same name. For example,  Genotype.bed, Genotype.bim and Genotype.bam :
 ```
-result <- Hi_RRM(“Genotype”,coefy)
+result <- Hi_RRM(Genotype,coefy)
 ```
 ## 3.Output files
 There are the three outputs: Optimal population phenotypic curve (R/list), Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
@@ -73,9 +73,11 @@ library(RcppArmadillo)
 library(nlme)
 
 setwd("./example")
+Phenotype <- "phenotype.txt"
+Genotype <- "Genotype"
 
 Order <- MakeOrder(Phenotype)$BIC
-coefy <-  Estimate_coefy("phenotype.txt",Order) 
+coefy <-  Estimate_coefy(Phenotype,Order) 
 result <- Hi_RRM("Genotype",coefy)
 
 
