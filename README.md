@@ -10,7 +10,7 @@ HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, parallel,data.ta
 
 ```
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
-system( “R CMD install HiRRM_1.0.tar.gz” )
+system( “R CMD INSTALL HiRRM_1.0.tar.gz” )
 ```
 
 
