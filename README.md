@@ -24,7 +24,7 @@ result <- Hi_RRM(Genotype,coefy)
 
 #### Arguments
 #### Phenotype
-An object class of character. Phenotype file contains variables ID, Covariates such as population stratefication and sex etc., Penotype values and Age in turn.
+An object class of character. Phenotype file contains variables ID, Covariates such as Population stratefication and Sex etc., Penotype values and Age in turn.
 For example :
 |ID|Sex|Phenotype| Age|
 | ---------- | :-----------:  | :-----------: | :-----------: |
@@ -43,7 +43,7 @@ An object class of numeric or formula，corrently,   which is taken at the order
 
 
 #### Genotype
-An object class of character，which consists of three PLINK BED files with the same name. For example,  Genotype.bed, Genotype.bim and Genotype.bam :
+An object class of character，which consists of three PLINK BED files with the same name. For example, Genotype.bed, Genotype.bim and Genotype.fam.
 
 
 ## 3.Output files
