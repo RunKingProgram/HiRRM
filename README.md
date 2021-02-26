@@ -52,7 +52,7 @@ result <- Hi_RRM(Genotype,coefy)
 ## 3.Output files
 There are the two outputs:  Phenotypic regressions（Regs.phenotype）and Association tests(allasso.txt and sigasso.txt).
 For example, sigasso. as follows:
-|CHR|	POS	|SNP|	BETA1	|BETA2|	BETA3|	BETA4|	BETA5|	VBETA1|VBETA2	|VBETA3	|VBETA4|VBETA5|chisq|	p-value|
+|Chr|	Pos	|Snp|	Beta1	|Beta2|	Beta3|	Beta4|	Beta5|	Vb1|Vb2	|Vb3	|Vb4|Vb5|Chisq|	P-value|
 | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |:-----------: |:-----------: |:-----------: |
 |2	|168798341|	UNC4465781|0.87197|0.9642221|0.7717525|0.9575686|-0.04723711|	0.02376907	|0.02651553	|0.02761537	|0.03023668	|0.000999294	|41.64283	|6.96E-08|
 |4	|3785255|UNC6639515|	0.1759812|	0.8056519	|0.7291173|	0.4126044	|0.01886118	|0.02634507	|0.02924049	|0.03057526	|0.03364178	|0.00088208	|50.43038	|1.13E-09|
