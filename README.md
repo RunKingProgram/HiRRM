@@ -13,7 +13,7 @@ system( “R CMD install HiRRM_1.0.tar.gz” )
 ```
 
 
-## 2. Main functions
+## 2. Main Usage
 The current version of HiRRM includes two main functions:
 ```
 coefy <- Estimate_coefy(Phenotype,order) 
@@ -39,15 +39,14 @@ For example :
 ...
 
 #### Order
-Order is an object class of numeric, that is, the order of optimal Legendre Submodel is an object class of numeric. Corrently, submodel is taken at the order of optimal Legendre polynomial used to fit population dynamic trajectory, which can be detemined by:
+Submodel is an object class of numeric, that is, the order of optimal Legendre Submodel is an object class of numeric or formula. Corrently,   submodel is taken at the order of optimal Legendre polynomial used to fit  population dynamic trajectory, which can be detemined by:
 ```
-
 Order <- MakeOrder(Phenotype)$BIC
 coefy <- Estimate_coefy(Phenotype,Order) 
 ```
 
 #### Genotype
-An object class of character，which consists of the three files in PLINK BED format (http://www.cog-genomics.org/plink/1.9/formats#bed)，which consists of  three PLINK files with the same name. For example,  Genotype.bed, Genotype.bim and Genotype.bam :
+An object class of character，which consists of three PLINK BED files with the same name. For example,  Genotype.bed, Genotype.bim and Genotype.bam :
 ```
 result <- Hi_RRM(“Genotype”,coefy)
 ```
