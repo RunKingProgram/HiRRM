@@ -24,9 +24,9 @@ result <- Hi_RRM(Genotype,coefy)
 
 #### Arguments
 #### Phenotype
-Phenotype file can be composed by an ID column (id), factor columns (such as population stratification and sex), phenotype (must be adjusted for non-time-dependent testing date) and time column (age) in turn.
+Phenotype file contains variables ID, Covariates such as population stratefication and sex etc., Penotype values and Age in turn.
 For example :
-|id|sex|phenotype| time|
+|id|sex|phenotype| Age|
 | ---------- | :-----------:  | :-----------: | :-----------: |
 |1 |1|4.9|1|
 |2 |2|4.6|1|
@@ -49,7 +49,8 @@ An object class of character，which consists of the three files in PLINK BED fo
 ```
 result <- Hi_RRM(“Genotype”,coefy)
 ```
-## 3.Output
+## 3.Output file
+
 The HiRRM.txt contains the results.The number of columns will depend on the number of phenotypes used for analysis. The first three columns are: chromosome numbers,base pair positions on the chromosome and snp ids. The last column contains p values from the association tests. The middle columns contain beta estimates and the variance matrix for these estimates. And QTN candidates above the Bonferroni corrected level of significance would be selected in R as matrix, as following:
 |CHR|	POS	|SNP|	BETA1	|BETA2|	BETA3|	BETA4|	BETA5|	VBETA1|VBETA2	|VBETA3	|VBETA4|VBETA5|chisq|	p-value|
 | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |:-----------: |:-----------: |:-----------: |
