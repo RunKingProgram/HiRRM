@@ -72,7 +72,7 @@ library(nlme)
 setwd("./example")
 Phenotype <- "phenotype.txt"
 Genotype <- "Genotype"
-Order <- 4
+Order <- 2
 
 coefy <-  Estimate_coefy(Phenotype,Order) 
 result <- Hi_RRM(Genotype,coefy)
