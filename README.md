@@ -14,7 +14,7 @@ system( “R CMD install HiRRM_1.0.tar.gz” )
 
 
 ## 2. Usage
-The current version of HiRRM includes two main functions:
+
 ```
 coefy <- Estimate_coefy(Phenotype,Order) 
 result <- Hi_RRM(Genotype,coefy)
