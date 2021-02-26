@@ -45,13 +45,17 @@ coefy <- Estimate_coefy(Phenotype,4)
 ```
 
 #### Genotype
-An object class of character，which consists of the three files in PLINK BED format (http://www.cog-genomics.org/plink/1.9/formats#bed). For example, Genotype= “Genotype.bed”, “Genotype.bim” and “Genotype.bam” :
+An object class of character，which consists of the three files in PLINK BED format (http://www.cog-genomics.org/plink/1.9/formats#bed). For example, Genotype files are “Genotype.bed”, “Genotype.bim” and “Genotype.bam” :
 ```
 result <- Hi_RRM(“Genotype”,coefy)
 ```
 ## 3.Output file
+Output contains two files: "Coefpheno.txt" and "The HiRRM.txt".
+"Coefpheno.txt" file is the result of Estimate_coefy function.
+ "HiRRM.txt contains the results.
 
-The HiRRM.txt contains the results.The number of columns will depend on the number of phenotypes used for analysis. The first three columns are: chromosome numbers,base pair positions on the chromosome and snp ids. The last column contains p values from the association tests. The middle columns contain beta estimates and the variance matrix for these estimates. And QTN candidates above the Bonferroni corrected level of significance would be selected in R as matrix, as following:
+
+The number of columns will depend on the number of phenotypes used for analysis. The first three columns are: chromosome numbers,base pair positions on the chromosome and snp ids. The last column contains p values from the association tests. The middle columns contain beta estimates and the variance matrix for these estimates. And QTN candidates above the Bonferroni corrected level of significance would be selected in R as matrix, as following:
 |CHR|	POS	|SNP|	BETA1	|BETA2|	BETA3|	BETA4|	BETA5|	VBETA1|VBETA2	|VBETA3	|VBETA4|VBETA5|chisq|	p-value|
 | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: | ---------- | :-----------:  | :-----------: | :-----------: |:-----------: |:-----------: |:-----------: |
 |2	|168798341|	UNC4465781|0.87197|0.9642221|0.7717525|0.9575686|-0.04723711|	0.02376907	|0.02651553	|0.02761537	|0.03023668	|0.000999294	|41.64283	|6.96E-08|
