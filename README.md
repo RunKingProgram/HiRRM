@@ -11,11 +11,11 @@ install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "
 system( “R CMD INSTALL HiRRM_1.0.tar.gz” )
 ```
 
-Under windows OS:
+Under Windows OS:
 
-1. Please install Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
+1. Install Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
 
-2. Tap following command to install R 
+2. Use following command to install R 
 ```
 sudo apt update
 sudo apt-get install r-base-core
@@ -23,7 +23,7 @@ sudo apt-get install r-base-core
 
 3. Use "explorer.exe ." command to manage files.
 
-4. Please install HiRRM following the same command as Linux and MacOs.
+4. Install HiRRM following the same command as Linux and MacOS.
 
 
 ## 2. Usage
