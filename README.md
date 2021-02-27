@@ -18,7 +18,9 @@ For MacOS:
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
 system( “R CMD INSTALL HiRRM_1.0_MacOS.tar.gz” )
 ```
-For windows OS,We recommend Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
+For windows OS:
+
+We recommend Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
 The installation steps are as follows:
 
 1.Open the Microsoft Store and choose your preferred Linux distribution.
