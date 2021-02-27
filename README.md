@@ -13,9 +13,9 @@ system( “R CMD INSTALL HiRRM_1.0.tar.gz” )
 
 Under windows OS:
 
-1. Please insstall Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
+1. Please install Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
 
-2. tap following command to install R 
+2. Tap following command to install R 
 ```
 sudo apt update
 sudo apt-get install r-base-core
@@ -23,7 +23,7 @@ sudo apt-get install r-base-core
 
 3. Use "explorer.exe ." Command to management files just like Windows OS.
 
-4. you can use the same command above to install HiRRM.
+4. You can use the same command above to install HiRRM.
 
 
 ## 2. Usage
