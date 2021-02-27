@@ -18,6 +18,32 @@ For MacOS:
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
 system( “R CMD INSTALL HiRRM_1.0_MacOS.tar.gz” )
 ```
+For windows OS,We recommend Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
+The installation steps are as follows:
+
+1.Open the Microsoft Store and choose your preferred Linux distribution.
+For example: Ubuntu 16.04 (https://www.microsoft.com/store/apps/9pjn388hp8c9)
+
+2.Open the PowerShell as an administrator, enter 
+```
+enable windows optionalfeature - Online - featurename Microsoft Windows subsystem Linux
+```
+and press enter to execute the command.
+
+3.tap following command to install R 
+```
+sudo apt update
+sudo apt-get install r-base-core
+```
+4. Use "explorer.exe ." Command to management files just like Windows OS.
+
+Now the subsystem has been installed and configured
+
+```
+install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
+system( “R CMD INSTALL HiRRM_1.0.tar.gz” )
+```
+
 
 ## 2. Usage
 
