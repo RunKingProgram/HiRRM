@@ -23,7 +23,7 @@ sudo apt-get install r-base-core
 
 3. Use "explorer.exe ." Command to management files just like Windows OS.
 
-4. you can use the same command above to install HiRRM
+4. you can use the same command above to install HiRRM.
 
 
 ## 2. Usage
