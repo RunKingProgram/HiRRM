@@ -15,15 +15,7 @@ Under Windows OS:
 
 1. Install Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
 
-2. Install R 
-```
-sudo apt update
-sudo apt-get install r-base-core
-```
-
-3. Use "explorer.exe ." command to manage files.
-
-4. Install HiRRM following the same command as Linux and MacOS.
+2. Install HiRRM following the same command as Linux and MacOS.
 
 
 ## 2. Usage
