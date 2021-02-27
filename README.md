@@ -15,7 +15,7 @@ Under Windows OS:
 
 1. Install Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
 
-2. Use following command to install R 
+2. Install R 
 ```
 sudo apt update
 sudo apt-get install r-base-core
