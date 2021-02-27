@@ -4,21 +4,15 @@
 ####	Downloading HiRRM
 HiRRM can be downloaded https://github.com/RunKingProgram/HiRRM. It can be installed as a regular R package.
 ####	Installing HiRRM
-HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, parallel,data.table, nlme and BEDMatrix. These dependencies should be installed before installing HiRRM. In addition, **HiRRM requires Hi_RRM file (Hi_RRM_linux for Linux) under your working directory**. Here is an example for installing HiRRM and all its dependencies in an R session(assuming none of the R packages other than the default has been installed):
+HiRRM links to R packages Rcpp, RcppArmadillo, RcppEigen, snow, parallel,data.table, nlme and BEDMatrix. These dependencies should be installed before installing HiRRM. In addition, **HiRRM requires Hi_RRM_linux file ( Hi_RRM for MacOS) under your working directory**. Here is an example under Linux and MacOS for installing HiRRM and all its dependencies in an R session(assuming none of the R packages other than the default has been installed):
 
-
-For Linux:
 ```
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
 system( “R CMD INSTALL HiRRM_1.0.tar.gz” )
 ```
 
-For MacOS:
-```
-install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
-system( “R CMD INSTALL HiRRM_1.0_MacOS.tar.gz” )
-```
-For windows OS:
+Under windows OS:
+
 1.Please insstall Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).
 
 2.tap following command to install R 
