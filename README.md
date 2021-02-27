@@ -37,7 +37,7 @@ sudo apt-get install r-base-core
 ```
 4. Use "explorer.exe ." Command to management files just like Windows OS.
 
-Now the subsystem has been installed and configured
+Now the subsystem has been installed and configured, and you can install HiRRM with the following commond:
 
 ```
 install.packages( c( "Rcpp", "RcppArmadillo", "RcppEigen", "snow", "parallel", "data.table", "nlme" , "BEDMatrix" ), repos = "https://cran.r-project.org/" )
