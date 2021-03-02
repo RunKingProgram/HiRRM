@@ -1,0 +1,1 @@
+chr	rs	ps	n_miss	allele1	allele0	af	beta_1	beta_2	beta_3	Vbeta_1_1	Vbeta_1_2	Vbeta_1_3	Vbeta_2_2	Vbeta_2_3	Vbeta_3_3	p_score

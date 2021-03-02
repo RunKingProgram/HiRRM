@@ -1,0 +1,27 @@
+##
+## GEMMA Version    = 0.98.4 (2021-02-24)
+## Build profile    = 
+## GCC version      = 4.8.5
+## GSL Version      = 2.6
+## OpenBlas         = OpenBLAS 0.3.6  - OpenBLAS 0.3.8 NO_LAPACKE DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64
+##   arch           = Haswell
+##   threads        = 8
+##   parallel type  = threaded
+##
+## Command Line Input = ./Hi_RRM -bfile Genotype -gk 2 -o kinship 
+##
+## Date = Tue Mar  2 22:51:43 2021
+##
+## Summary Statistics:
+## number of total individuals = 1212
+## number of analyzed individuals = 1212
+## number of covariates = 1
+## number of phenotypes = 1
+## number of total SNPs/var = 11833
+## number of analyzed SNPs/var = 11833
+##
+## Computation Time:
+## total computation time = 0.152083 min 
+## computation time break down: 
+##      time on calculating relatedness matrix = 0.10625 min 
+##
